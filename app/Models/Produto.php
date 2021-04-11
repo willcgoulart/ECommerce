@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class Produto extends Model
     protected $primaryKey = 'id_prod';
     public $timestamps = false;
 
-    protected $fillable = ['desc_prod', 'id_marca', 'id_tipo', 'imagem'];
+    protected $fillable = ['nome_prod', 'id_marca', 'id_tipo', 'preco', 'desc_prod', 'imagem'];
 
     public function marca()
     {

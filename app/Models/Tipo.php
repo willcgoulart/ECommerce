@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 
-class Marca extends Model
+class Tipo extends Model
 {
-    protected $table = 'marcas';
-    protected $primaryKey = 'id_marca';
+    protected $table = 'tipos';
+    protected $primaryKey = 'id_tipo';
     public $timestamps = false;
 
     public function dadosProdutos()

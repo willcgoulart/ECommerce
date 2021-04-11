@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\Produto;
-use App\Entities\Marca;
-use App\Entities\Tipo;
+use App\Models\Produto;
+use App\Models\Marca;
+use App\Models\Tipo;
 
 use App\Services\ProdutoService;
 
@@ -33,7 +33,7 @@ class ProdutoController extends Controller
 	public function store(Request $request)
 	{
 
-		$produto =  $this->produtoService->criarProduto($request->nome, $request->marca, $request->tipo);
+		$produto =  $this->produtoService->criarProduto($request->nome, $request->marca, $request->tipo, $request->preco, $request->descricao);
 
 		$request->session()->flash('mensagem',"Produto {$produto->nome} criada com sucesso");
 

@@ -23,6 +23,14 @@
 					@endforeach
 				</select>
 			</div>
+			<div class="col col-8">
+				<label for="preco">Preço</label>
+				<input type="text" class="form-control" name="preco" id="preco">
+			</div>
+			<div class="col col-8">
+				<label for="descricao">Descrição</label>
+				<input type="text" class="form-control" name="descricao" id="descricao">
+			</div>
 		</div>
 		<button class="btn btn-primary mt-2" >Adicionar</button>
 	</form>

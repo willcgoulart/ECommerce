@@ -1,7 +1,0 @@
-1) download php - 8.0.3
-2) Instalar o composer
-3) No PHP.ini descomentar extension=fileinfo e extension=pdo_mysql
-4) Eu utilizo o git Bash
-5) Eu utilizo o xampp para o mysql
-
-

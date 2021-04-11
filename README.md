@@ -1,3 +1,18 @@
+## Instalação
+
+- **Ter a versão mais atual do [Composer](https://getcomposer.org/download/) instalado**
+- **Versão do [PHP](https://www.php.net/downloads).**
+- **Para o funcionamento, "Descomentar" a extensão extension=fileinfo e extension=pdo_mysql no php.ini**
+- **Eu utilizo o git Bash
+- **Eu utilizo o xampp para o mysql
+
+### Após realizar o clone do repositório
+> - Executar o comando ```composer install```
+> - Criar uma copia do arquivo ```.env.sample``` e renomear a copia para ```.env```
+> - No arquivo .env mudar para o banco correto DB_DATABASE=ecommerce```
+> - Executar o comando ```php artisan key:generate```
+> - Rodar o projeto php artisan serve
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
