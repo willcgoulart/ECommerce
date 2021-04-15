@@ -1,5 +1,6 @@
+@extends('layout')
 
-
+@section('conteudo')
 	<form method="post">
 		@csrf
 		<div class="row">
@@ -34,3 +35,5 @@
 		</div>
 		<button class="btn btn-primary mt-2" >Adicionar</button>
 	</form>
+
+@endsection
