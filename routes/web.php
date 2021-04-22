@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('/produtos')->group(function () {
-
+    Route::get('', 'ProdutoController@index')->name('lista_produto');
     Route::get('criar', 'ProdutoController@create')->name('form_criar_produto');
     Route::post('criar', 'ProdutoController@store');
     

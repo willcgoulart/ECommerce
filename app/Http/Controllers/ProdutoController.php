@@ -7,6 +7,7 @@ use App\Models\Marca;
 use App\Models\Tipo;
 
 use App\Services\ProdutoService;
+use App\Http\Requests\ProdutosRequest;
 
 use Illuminate\Http\Request;
 
@@ -20,6 +21,13 @@ class ProdutoController extends Controller
         $this->produtoService = $produtoService;
     }
 
+	public  function index()
+	{
+		$produtos = Produto::query()->orderBy('nome_prod')->get();
+
+		return view('produtos.index', compact('produtos'));
+	}
+
 
     public  function create()
 	{
@@ -30,10 +38,10 @@ class ProdutoController extends Controller
 		return view('produtos.create', compact('marcas','tipos'));
 	}
 
-	public function store(Request $request)
+	public function store(ProdutosRequest $request)
 	{
-
-		$produto =  $this->produtoService->criarProduto($request->nome, $request->marca, $request->tipo, $request->preco, $request->descricao);
+		$imagem = $request->imagem->store('produtos');
+		$produto =  $this->produtoService->criarProduto($request->nome, $request->marca, $request->tipo, $request->preco, $request->descricao, $imagem);
 
 		$request->session()->flash('mensagem',"Produto {$produto->nome} criada com sucesso");
 
