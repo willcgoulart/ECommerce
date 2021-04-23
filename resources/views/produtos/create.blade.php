@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('conteudo')
-	<form method="post" enctype="multipart/form-data">
+	<form method="post" action="{{ route('form_criar_produto') }}" enctype="multipart/form-data">
 		@csrf
 		<div class="row">
 			<div class="col col-8 form-group">

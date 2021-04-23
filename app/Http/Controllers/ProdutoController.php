@@ -23,7 +23,7 @@ class ProdutoController extends Controller
 
 	public  function index()
 	{
-		$produtos = Produto::query()->orderBy('nome_prod')->get();
+		$produtos = Produto::query()->where('status', 'A')->orderBy('nome_prod')->get();
 
 		return view('produtos.index', compact('produtos'));
 	}
@@ -31,8 +31,8 @@ class ProdutoController extends Controller
 
     public  function create()
 	{
-		$marcas = Marca::query()->orderBy('desc_marca')->get();
-		$tipos = Tipo::query()->orderBy('desc_tipo')->get();
+		$marcas = Marca::query()->where('status', 'A')->orderBy('desc_marca')->get();
+		$tipos = Tipo::query()->where('status', 'A')->orderBy('desc_tipo')->get();
 
 		//return view('produtos.create');
 		return view('produtos.create', compact('marcas','tipos'));

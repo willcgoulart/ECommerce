@@ -20,6 +20,10 @@ Route::get('/', function () {
 Route::prefix('/produtos')->group(function () {
     Route::get('', 'ProdutoController@index')->name('lista_produto');
     Route::get('criar', 'ProdutoController@create')->name('form_criar_produto');
-    Route::post('criar', 'ProdutoController@store');
-    
+    Route::post('criar', 'ProdutoController@store')->name('form_criar_produto');
+    Route::post('edita', 'ProdutoController@edita')->name('form_edita_produto');
+    Route::delete('{id}', 'ProdutoController@destroy');    
 });
+
+Route::get('/entrar', 'EntrarController@index');
+Route::post('/entrar', 'EntrarController@entrar');

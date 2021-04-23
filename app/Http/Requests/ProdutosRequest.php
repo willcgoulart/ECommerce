@@ -27,7 +27,7 @@ class ProdutosRequest extends FormRequest
             'nome' => 'required',
             'marca' => 'required',
             'tipo' => 'required',
-            'preco' => 'required',
+            'preco' => ['required','numeric'],
             'descricao' => 'required',
             'imagem' => ['required','image'],
         ];
