@@ -26,4 +26,7 @@ Route::prefix('/produtos')->group(function () {
 });
 
 Route::get('/entrar', 'EntrarController@index');
-Route::post('/entrar', 'EntrarController@entrar');
+Route::post('/entrar', 'EntrarController@login');
+
+Route::get('/cadastrar', 'CadastrarUserController@create')->name('form_cadastra_user');
+Route::post('/cadastrar', 'CadastrarUserController@store')->name('form_cadastra_user');

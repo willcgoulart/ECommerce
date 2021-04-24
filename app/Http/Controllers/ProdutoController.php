@@ -45,6 +45,7 @@ class ProdutoController extends Controller
 
 		$request->session()->flash('mensagem',"Produto {$produto->nome} criada com sucesso");
 
-		//return redirect()->route('listar_produtos');
+		$produtos = Produto::query()->where('status', 'A')->orderBy('nome_prod')->get();
+		return view('produtos.index', compact('produtos'));
 	}
 }
