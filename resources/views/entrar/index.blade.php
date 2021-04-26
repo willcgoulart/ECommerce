@@ -19,14 +19,31 @@
             </div>
             <form method="post">
                 @csrf
-             
+
+                @include('erros', ['errors' => $errors->mensagemErro])
                 <div class="form-group mx-sm-4 mb-2">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required class="form-control">
+                    <input type="email" class="form-control {{ $errors->has("email") ? 'is-invalid' :'' }}"
+                    id="email" name="email" value="{{ old('email') ?? '' }}">
+                    <div class="invalid-feedback">
+                        @if($errors->has("email"))
+                            @foreach($errors->get("email") as $msg)
+                            {{$msg}}<br />
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
                 <div class="form-group mx-sm-4 mb-2">
                     <label for="password">Senha</label>
-                    <input type="password" name="password" id="password" required min="1" class="form-control">
+                    <input type="password" 	class="form-control {{ $errors->has("password") ? 'is-invalid' :'' }}"
+                    id="password" name="password">
+                    <div class="invalid-feedback">
+                        @if($errors->has("password"))
+                            @foreach($errors->get("password") as $msg)
+                            {{$msg}}<br />
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
                 
                 <div class="form-group text-center">

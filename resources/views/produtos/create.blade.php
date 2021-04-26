@@ -7,7 +7,7 @@
 			<div class="col col-8 form-group">
 				<label for="nome">Nome</label>
 				<input type="text" 	class="form-control {{ $errors->has("nome") ? 'is-invalid' :'' }}"
-				id="nome" name="nome">
+				id="nome" name="nome" value="{{ old('nome') ?? '' }}">
 				<div class="invalid-feedback">
 					@if($errors->has("nome"))
 						@foreach($errors->get("nome") as $msg)
@@ -18,7 +18,7 @@
 			</div>
 			<div class="col col-8 form-group">
 				<label for="marca">Marcas</label>
-				<select class="form-control {{ $errors->has("marca") ? 'is-invalid' :'' }}" id="marca" name="marca">
+				<select class="form-control {{ $errors->has("marca") ? 'is-invalid' :'' }}" id="marca" name="marca" value="{{ old('marca') ?? '' }}">
 					<option value="">Selecione</option>
 					@foreach ($marcas as $marca)
 						<option value="{{ $marca->id_marca }}">{{ $marca->desc_marca }}</option>
@@ -34,7 +34,7 @@
 			</div>
 			<div class="col col-8 form-group">
 				<label for="tipo">Tipos</label>
-				<select class="form-control {{ $errors->has("tipo") ? 'is-invalid' :'' }}" name="tipo" id="tipo">
+				<select class="form-control {{ $errors->has("tipo") ? 'is-invalid' :'' }}" name="tipo" id="tipo" value="{{ old('tipo') ?? '' }}">
 					<option value="">Selecione</option>
 					@foreach ($tipos as $tipos)
 						<option value="{{ $tipos->id_tipo }}">{{ $tipos->desc_tipo }}</option>
@@ -51,7 +51,7 @@
 			<div class="col col-8 form-group">
 				<label for="preco">Preço</label>
 				<input type="text" 	class="form-control {{ $errors->has("preco") ? 'is-invalid' :'' }} preco"
-				id="preco" name="preco">
+				id="preco" name="preco" value="{{ old('preco') ?? '' }}">
 				<div class="invalid-feedback">
 					@if($errors->has("preco"))
 						@foreach($errors->get("preco") as $msg)
@@ -63,7 +63,7 @@
 			<div class="col col-8 form-group">
 				<label for="descricao">Descrição</label>
 				<input type="text" 	class="form-control {{ $errors->has("descricao") ? 'is-invalid' :'' }}"
-				id="descricao" name="descricao">
+				id="descricao" name="descricao"  value="{{ old('descricao') ?? '' }}">
 				<div class="invalid-feedback">
 					@if($errors->has("descricao"))
 						@foreach($errors->get("descricao") as $msg)
@@ -75,7 +75,7 @@
 			<div class="col col-8 form-group">
 				<label for="imagem">Imagem</label>
 				<input type="file" 	class="form-control-file {{ $errors->has("imagem") ? 'is-invalid' :'' }}"
-				id="imagem" name="imagem">
+				id="imagem" name="imagem"  value="{{ old('imagem') ?? '' }}">
 				<div class="invalid-feedback">
 					@if($errors->has("imagem"))
 						@foreach($errors->get("imagem") as $msg)

@@ -21,11 +21,9 @@ class CadastrarUserController extends Controller
         $data = $request->except( ['_token','password_confirmation'] );
         $data['password'] = Hash::make($data['password']);
         $user = User::create($data);
-       
-        dd('criado');
-        // Auth::login($user);
-        //return redirect()->route('dashboard_user');
         
+        Auth::login($user);
+        return redirect()->route('dashboard_cliente');      
 	}
 
 }

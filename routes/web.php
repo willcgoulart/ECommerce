@@ -25,6 +25,11 @@ Route::prefix('/produtos')->group(function () {
     Route::delete('{id}', 'ProdutoController@destroy');    
 });
 
+Route::prefix('/dashboard')->group(function () {
+    Route::get('cliente', 'ClienteController@index')->name('dashboard_cliente');
+    Route::get('adm', 'AdmController@index')->name('dashboard_adm');
+});
+
 Route::get('/entrar', 'EntrarController@index');
 Route::post('/entrar', 'EntrarController@login');
 
