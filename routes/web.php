@@ -30,7 +30,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('adm', 'AdmController@index')->name('dashboard_adm');
 });
 
-Route::get('/entrar', 'EntrarController@index');
+Route::get('/entrar', 'EntrarController@index')->name('login');
 Route::post('/entrar', 'EntrarController@login');
 
 Route::get('/cadastrar', 'CadastrarUserController@create')->name('form_cadastra_user');
