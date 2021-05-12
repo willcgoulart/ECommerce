@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.layout')
 
 @section('conteudo')
 	<form method="post" action="{{ route('form_criar_produto') }}" enctype="multipart/form-data">

@@ -15,13 +15,13 @@
     <nav class="main-nav" id="main-nav" data-nav="true">
         <ul class="menu">
             <li class="menu-item">
-                <a href="index.php" class="menu-link">A Cervejaria</a>
+                <a href="{{ route('home') }}" class="menu-link">A Cervejaria</a>
             </li>
             <li class="menu-item">
                 <a href="#sobre" class="menu-link">Sobre</a>
             </li>
             <li class="menu-item">
-                <a href="ecommerce.php" class="menu-link">Produtos</a>
+                <a href="{{ route('ecommerce') }}" class="menu-link">Produtos</a>
             </li>
             <li class="menu-item">
                 <a href="#clube-de-assinatura" class="menu-link">Clube de Assinatura</a>

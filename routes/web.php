@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
+Route::get('/ecommerce', function () {
+    return view('ecommerce');
+})->name('ecommerce');
 
 Route::prefix('/produtos')->group(function () {
     Route::get('', 'ProdutoController@index')->name('lista_produto');
