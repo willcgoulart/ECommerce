@@ -2,7 +2,7 @@
 	"products" : [
 		{
 			"name" : "Cerveja Artesanal Red",
-			"price" : "35.99",
+			"price" : "R$ 35.99",
 			"options" : [
 				{ "Opção" : "Pilsen, Ipa" }
 			],
@@ -27,6 +27,24 @@
 			"image" : "images/produto3.jpg",
 			"description" : "Cerveja Otima"
 		},
+		{
+			"name" : "Cerveja Teste",
+			"price" : "15.99",
+			"options" : [
+				{ "Size" : "Small,Medium,Large" }
+			],
+			"image" : "images/produto3.jpg",
+			"description" : "Cerveja Otima"
+		},	
+		{
+			"name" : "Cerveja Teste",
+			"price" : "15.99",
+			"options" : [
+				{ "Size" : "Small,Medium,Large" }
+			],
+			"image" : "images/produto3.jpg",
+			"description" : "Cerveja Otima"
+		},		
 		{
 			"name" : "Cerveja Teste",
 			"price" : "15.99",

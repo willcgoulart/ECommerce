@@ -28,7 +28,7 @@
         <div class="info-box">
             <h2 class="titulo-rodape">Receba nossas novidades</h2>
 
-            <form ajax-form="form" action="php/newsletter.php" method="post" enctype="multipart/form-data" class="form-inline">
+            <form ajax-form="form" action="php/newsletter.php" method="post" enctype="multipart/form-data" class="form-inline assinar">
                 <div class="clearfix">
                     <div>
                         <button ajax-form="submit" type="submit" class="btn btn-primary-assinar hidden-xs hidden-sm">Assinar</button>

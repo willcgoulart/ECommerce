@@ -1628,6 +1628,7 @@ pre code {
   margin-left: auto;
 }
 .row {
+  color: #000;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -3239,7 +3240,9 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
 }
 .btn-primary:hover {
-  color: #fff;
+  color: #000;
+  background-color: #ffdd00;
+  border-color: #ffdd00;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -8921,6 +8924,10 @@ body {
   margin-top: 10px;
 }
 
+.assinar{
+  display: block;
+}
+
 .btn-primary-assinatura{
   background: rgba(220, 183, 119, 1);
   font-family: 'Montserrat ', sans-serif;
@@ -9157,6 +9164,11 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+
+.rodape:hover {
+  text-decoration: none;
+  color: #ffdd00;
 }
 
 .rodape-direita{
