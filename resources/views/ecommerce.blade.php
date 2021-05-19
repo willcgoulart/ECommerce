@@ -55,7 +55,6 @@
                             <label>Qtd</label>
                             <input type="number" value="1" min="1" step="1" class="item_Quantity">
                         </div>
-                        <div class="simpleStore_options"></div>
                         <a class="item_add button u-pull-right" href="javascript:;">Adicionar ao Carrinho</a>
                     </div>
                 </div>

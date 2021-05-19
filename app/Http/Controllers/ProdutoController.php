@@ -46,6 +46,15 @@ class ProdutoController extends Controller
 		$request->session()->flash('mensagem',"Produto {$produto->nome} criada com sucesso");
 
 		$produtos = Produto::query()->where('status', 'A')->orderBy('nome_prod')->get();
+
+		foreach($produtos as $produto)
+        {    
+            $produtoJson['products'][] = array('name' => $produto->nome_prod,  'price' => $produto->preco, 'options' => '', 'image' => 'http://127.0.0.1:8000/storage/'.$produto->imagem, 'description' => $produto->desc_prod, 'id_prod' => $produto->id_prod);
+        }
+
+        $produtoJson = json_encode($produtoJson);
+        file_put_contents('products.json', $produtoJson);
+
 		return view('produtos.index', compact('produtos'));
 	}
 }

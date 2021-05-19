@@ -2,9 +2,13 @@
 
 @section('conteudo')
 
-    <form method="post" action="{{ route('form_cadastra_user') }}">
+    <style>
+        #header{background: #000!important;}
+    </style>
+
+    <form method="post" action="{{ route('form_cadastra_user') }}" style="padding-top: 10%;">
         @csrf
-        <div class="row">
+        <div class="row p-5">
             <div class="col col-12 form-group">
                 <div class="text-center">
                     <h3>CADASTRO NA PLATAFORMA</h3>
@@ -12,7 +16,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="name">Nome</label>
-                <input type="text" class="form-control {{ $errors->has("name") ? 'is-invalid' :'' }}"
+                <input type="text" class="form-control {{ $errors->has("name") ? 'is-invalid' :'' }} border border-secondary"
                 id="name" name="name" value="{{ old('name') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("name"))
@@ -24,7 +28,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" class="form-control {{ $errors->has("cpf") ? 'is-invalid' :'' }} cpf"
+                <input type="text" class="form-control {{ $errors->has("cpf") ? 'is-invalid' :'' }} cpf border border-secondary"
                 id="cpf" name="cpf" value="{{ old('cpf') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("cpf"))
@@ -37,7 +41,7 @@
 
             <div class="col col-6 form-group">
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text" class="form-control {{ $errors->has("sobrenome") ? 'is-invalid' :'' }}"
+                <input type="text" class="form-control {{ $errors->has("sobrenome") ? 'is-invalid' :'' }} border border-secondary"
                 id="sobrenome" name="sobrenome" value="{{ old('sobrenome') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("sobrenome"))
@@ -49,7 +53,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control {{ $errors->has("telefone") ? 'is-invalid' :'' }} telefone"
+                <input type="text" class="form-control {{ $errors->has("telefone") ? 'is-invalid' :'' }} telefone border border-secondary"
                 id="telefone" name="telefone" value="{{ old('telefone') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("telefone"))
@@ -64,7 +68,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control {{ $errors->has("email") ? 'is-invalid' :'' }}"
+                <input type="email" class="form-control {{ $errors->has("email") ? 'is-invalid' :'' }} border border-secondary"
                 id="email" name="email" value="{{ old('email') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("email"))
@@ -83,7 +87,7 @@
 
             <div class="col col-6 form-group">
                 <label for="cep">CEP</label>
-                <input type="text" class="form-control {{ $errors->has("cep") ? 'is-invalid' :'' }} cep"
+                <input type="text" class="form-control {{ $errors->has("cep") ? 'is-invalid' :'' }} cep border border-secondary"
                 id="cep" name="cep" value="{{ old('cep') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("cep"))
@@ -95,7 +99,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="numero">Numero</label>
-                <input type="text" class="form-control {{ $errors->has("numero") ? 'is-invalid' :'' }}"
+                <input type="text" class="form-control {{ $errors->has("numero") ? 'is-invalid' :'' }} border border-secondary"
                 id="numero" name="numero" value="{{ old('numero') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("numero"))
@@ -108,7 +112,7 @@
 
             <div class="col col-6 form-group">
                 <label for="endereco">Endereço</label>
-                <input type="text" class="form-control {{ $errors->has("endereco") ? 'is-invalid' :'' }}"
+                <input type="text" class="form-control {{ $errors->has("endereco") ? 'is-invalid' :'' }} border border-secondary"
                 id="endereco" name="endereco" value="{{ old('endereco') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("endereco"))
@@ -120,7 +124,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="complemento">Complemento</label>
-                <input type="text" class="form-control {{ $errors->has("complemento") ? 'is-invalid' :'' }}"
+                <input type="text" class="form-control {{ $errors->has("complemento") ? 'is-invalid' :'' }} border border-secondary"
                 id="complemento" name="complemento" value="{{ old('complemento') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("complemento"))
@@ -134,7 +138,7 @@
             <div class="col col-6 form-group"></div>
             <div class="col col-6 form-group">
                 <label for="ponto_referencia">Ponto de Referência</label>
-                <input type="text" class="form-control {{ $errors->has("ponto_referencia") ? 'is-invalid' :'' }}"
+                <input type="text" class="form-control {{ $errors->has("ponto_referencia") ? 'is-invalid' :'' }} border border-secondary"
                 id="ponto_referencia" name="ponto_referencia" value="{{ old('ponto_referencia') ?? '' }}">
                 <div class="invalid-feedback">
                     @if($errors->has("ponto_referencia"))
@@ -153,7 +157,7 @@
 
             <div class="col col-6 form-group">
                 <label for="password">Senha</label>
-                <input type="password" 	class="form-control {{ $errors->has("password") ? 'is-invalid' :'' }}"
+                <input type="password" 	class="form-control {{ $errors->has("password") ? 'is-invalid' :'' }} border border-secondary"
                 id="password" name="password">
                 <div class="invalid-feedback">
                     @if($errors->has("password"))
@@ -165,7 +169,7 @@
             </div>
             <div class="col col-6 form-group">
                 <label for="password_confirmation">Digite Novamente</label>
-                <input type="password" 	class="form-control {{ $errors->has("password_confirmation") ? 'is-invalid' :'' }}"
+                <input type="password" 	class="form-control {{ $errors->has("password_confirmation") ? 'is-invalid' :'' }} border border-secondary"
                 id="password_confirmation" name="password_confirmation">
                 <div class="invalid-feedback">
                     @if($errors->has("password_confirmation"))
@@ -176,7 +180,9 @@
                 </div>
             </div>
 		</div>
-		<button class="btn btn-primary mt-2" >Finalizar Cadastro</button>
+        <div class="form-group text-center">
+		    <button class="btn btn-primary mt-2 p-2" style="font-size: 14px">Finalizar Cadastro</button>
+        </div>
 	</form>
     <script>
         $(document).ready(function(){
