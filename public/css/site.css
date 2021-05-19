@@ -3233,6 +3233,8 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary {
   color: #fff;
   padding-bottom: 45px;
+  width: 200px;
+  height: 53px;
 
 }
 .btn-primary:focus,
@@ -8905,6 +8907,8 @@ body {
 /*BOTÕES*/
 
 .btn-primary-banner{
+  width: 500px;
+  height: 48px;
   background: #ffdd00;
   font-family: 'hurme_geometric_sans_4black';
   font-size: 26px;
@@ -8992,6 +8996,12 @@ body {
 .tamanho-banner{
   max-width: 750px;
 }
+
+/*MAIN PRODUTO*/
+.tamanho-produto{
+  max-width: 650px;
+}
+
 .titulo-banner{
   color: #FFF;
   text-align: center;
@@ -9712,6 +9722,20 @@ body {
   align-items: center;
   display: flex;
 }
+
+.imagem-produto{
+  background-image: url(../images/Banner-Clube.png);
+  background-size: 100%;
+  min-height: 580px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.titulo-sombra{
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 .main-banner .carousel {
   overflow: hidden;
 }

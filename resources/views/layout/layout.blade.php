@@ -37,12 +37,11 @@
 
         <!-- Favicon
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('images/cerveja.png') }}">
 
     </head>
    <body>
         @include('layout.header')
-        @include('layout.main-banner')
 		
 		@yield('conteudo')
 

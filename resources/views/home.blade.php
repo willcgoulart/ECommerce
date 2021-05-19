@@ -1,5 +1,7 @@
 @extends('layout.layout')
 
+@include('layout.main-banner')
+
 @section('conteudo')
 
 	@include('layout.main-conteudo')

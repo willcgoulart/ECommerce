@@ -10,7 +10,7 @@
                         <a href="#sobre" class="rodape">- Sobre</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#produtos" class="rodape">- Produtos</a>
+                        <a href="{{ route('ecommerce') }}" class="rodape">- Produtos</a>
                     </li>
                     <li class="menu-item">
                         <a href="#clube-de-assinatura" class="rodape">- Clube de Assinatura</a>

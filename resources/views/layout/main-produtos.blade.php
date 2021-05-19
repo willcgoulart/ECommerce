@@ -14,7 +14,7 @@
                     <img src="images/produto3.jpg" class="card-tamanho" alt="Cerveja1">
                     <p class="valor">25,00$</p>
                     <p class="cartao">Cartão de Credito</p>
-                    <button class="btn btn-primary center-block hidden-xs hidden-sm">Comprar</button>
+                    <a href="{{ route('ecommerce') }}" class="btn btn-primary center-block">Ver Mais</a>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
                     <img src="images/produto2.jpg" class="card-tamanho" alt="Cerveja2">
                     <p class="valor">25,00$</p>
                     <p class="cartao">Cartão de Credito</p>
-                    <button class="btn btn-primary center-block hidden-xs hidden-sm">Comprar</button>
+                    <a href="{{ route('ecommerce') }}" class="btn btn-primary center-block">Ver Mais</a>                
                 </div>
             </div>
             <div class="">
@@ -39,7 +39,7 @@
                     <img src="images/produto1.jpeg" class="card-tamanho" alt="Cerveja3">
                     <p class="valor">25,00$</p>
                     <p class="cartao">Cartão de Credito</p>
-                    <button class="btn btn-primary center-block hidden-xs hidden-sm">Comprar</button>
+                    <a href="{{ route('ecommerce') }}" class="btn btn-primary center-block">Ver Mais</a>                
                 </div>
         </div>
 

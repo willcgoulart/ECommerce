@@ -1,5 +1,7 @@
 @extends('layout.layout')
 
+@include('layout.main-banner')
+
 @section('conteudo')
 
     <div class="row">
@@ -15,7 +17,7 @@
         <div class="col-7 mt-5">
             <div class="text-center">
                 <h4>Acesso para Área de membros Exclusivos</h4>
-                <p>Área destinada para clientes e assinate do clube da cervejaria JackLuis</p>
+                <p>Área destinada para clientes e assinantes do clube da cervejaria JackLuis</p>
             </div>
             <form method="post">
                 @csrf

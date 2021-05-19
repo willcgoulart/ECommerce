@@ -1,5 +1,7 @@
 @extends('layout.layout')
 
+@include('layout.main-banner-produto')
+
 @section('conteudo')
 
         <!-- Primary Page Layout
