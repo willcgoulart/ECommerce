@@ -1631,6 +1631,7 @@ pre code {
   color: #000;
   margin-right: -15px;
   margin-left: -15px;
+  justify-content: center;
 }
 .row-no-gutters {
   margin-right: 0;
@@ -8933,6 +8934,7 @@ body {
 }
 
 .btn-primary-assinatura{
+  height: 10px;
   background: rgba(220, 183, 119, 1);
   font-family: 'Montserrat ', sans-serif;
   font-weight: 700;
@@ -9000,6 +9002,11 @@ body {
 /*MAIN PRODUTO*/
 .tamanho-produto{
   max-width: 650px;
+}
+
+/*MAIN ASSINATURA*/
+.banner-assinatura{
+  max-width: 900px;
 }
 
 .titulo-banner{
@@ -9072,6 +9079,37 @@ body {
   padding-bottom: 50px;
   text-transform: none;
 }
+
+.circulos{
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 50px;
+}
+.texto-assinatura{
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.imagem-assinatura{
+    background-image: url(../images/assinatura.jpg);
+    background-size: 100%;
+    min-height: 800px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.titulo-assinatura{
+  font-family: 'Montserrat ', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+  color: #5e3712;
+  padding-bottom: 50px;
+  padding-top: 80px;
+  text-transform: none;
+}
+
 .card-tamanho{
   padding-top: 30px;
   padding-bottom: 20px;

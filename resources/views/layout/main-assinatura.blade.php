@@ -4,7 +4,7 @@
             <p class="text-assinatura">CONHEÇA O MAIOR E MAIS QUERIDO CLUBE DE ASSINATURAS DE CERVEJA ARTESANAL DO RS. </p>
         </div>
         <div>
-            <button class="btn btn-primary-assinatura hidden-xs hidden-sm">Saiba mais</button>
+            <a href="{{ route('assinatura') }}" class="btn btn-primary-assinatura hidden-xs hidden-sm">Saiba mais</a>
         </div>
     </div>
 </section>
