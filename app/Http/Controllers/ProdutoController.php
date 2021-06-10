@@ -34,7 +34,6 @@ class ProdutoController extends Controller
 		$marcas = Marca::query()->where('status', 'A')->orderBy('desc_marca')->get();
 		$tipos = Tipo::query()->where('status', 'A')->orderBy('desc_tipo')->get();
 
-		//return view('produtos.create');
 		return view('produtos.create', compact('marcas','tipos'));
 	}
 

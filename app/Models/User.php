@@ -16,6 +16,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $primaryKey = 'id_user';
+    
     protected $fillable = [
         'name',
         'cpf',
@@ -28,6 +30,10 @@ class User extends Authenticatable
         'complemento',
         'ponto_referencia',
         'password',
+        'tipo_user',
+        'tipo_pano',
+        'updated_at',
+        'created_at',
     ];
 
     /**
@@ -48,4 +54,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function dadosPedidos()
+    {
+        return $this->belongsTo(Pedido::class);
+    }
 }

@@ -20,13 +20,16 @@ class EntrarController extends Controller
                 ->back()
                 ->withErrors('Usuário e/ou senha incorretos', 'mensagemErro');
         }
-        
         if( Auth::user()->tipo_user==1 )//Usuario adm
         {
             return redirect()->route('dashboard_adm');
         }
         return redirect()->route('dashboard_cliente');
-    }
-
+    }   
     
+    public function deslogar()
+    {
+        Auth::logout();
+        return back();
+    }
 }

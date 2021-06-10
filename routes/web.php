@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/ecommerce', function () {
-    return view('ecommerce');
-})->name('ecommerce');
+Route::get('/ecommerce', 'EcommerceController@index')->name('ecommerce');
 
 Route::prefix('/produtos')->group(function () {
     Route::get('', 'ProdutoController@index')->name('lista_produto');
@@ -34,8 +32,11 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('adm', 'AdmController@index')->name('dashboard_adm');
 });
 
+Route::get('/deslogar', 'EntrarController@deslogar')->name('deslogar');
 Route::get('/entrar', 'EntrarController@index')->name('login');
 Route::post('/entrar', 'EntrarController@login');
 
 Route::get('/cadastrar', 'CadastrarUserController@create')->name('form_cadastra_user');
 Route::post('/cadastrar', 'CadastrarUserController@store')->name('form_cadastra_user');
+
+Route::post('/criaPedido', 'PedidosController@create')->name('criar_pedido');

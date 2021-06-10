@@ -28,13 +28,19 @@
             </li>
             <li class="menu-item">
                 <div class="row">
-                    <a href="{{ route('login') }}" class="button button-primary carrinho">
-                        <span>Login</span>
-                    </a>
+                    @auth
+                        <a href="{{ route('deslogar') }}" class="button button-primary carrinho">
+                            <span>Deslogar</span>
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="button button-primary carrinho">
+                            <span>Login</span>
+                        </a>
+                    @endauth
                 </div>
             </li>
             <li class="menu-item">
-                <div class="row">
+                <div class="row" onclick="ajustaEndereco();">
                     <a class="button button-primary u-pull-right simpleStore_viewCart carrinho">
                         <i class="fa fa-shopping-cart"></i> Carrinho <span class="simpleCart_total"></span>
                     </a>

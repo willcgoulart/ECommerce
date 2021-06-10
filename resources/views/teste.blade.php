@@ -2,7 +2,7 @@
 
 @include('layout.main-banner-produto')
 
-@section('conteudo')
+@section('conteudo')     
 
         <!-- Primary Page Layout
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -13,7 +13,7 @@
             <div class="simpleStore_container"></div>
             <div class="simpleStore_cart_container"></div>
             @auth
-                <div class="p-4 mb-4" style="border: 1px solid #EFEFEF; display: none;" id="enderecoLogado">
+                <div class="p-4 mb-4" style="border: 1px solid #EFEFEF;">
                     <h4>Endereço da Entraga</h4>
                     <p style="text-align: left;">Endereço: {{ Auth::user()->endereco }}</p>
                     <p style="text-align: left;">N: {{ Auth::user()->numero." ".Auth::user()->complemento }}</p>
@@ -40,7 +40,7 @@
                             <span class="item_price"></span>
                         </div>
                         <div class="simpleStore_getDetail_container">
-                            <a class="button u-pull-right simpleStore_getDetail" onclick="ajustaEndereco();">Detalhes</a>
+                            <a class="button u-pull-right simpleStore_getDetail">Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
 
                         <p class="item_description"></p>
                         <span class="item_price"></span>
-
+                        
                         <p class="item_id_prod" style="display: none;"></p>
 
                         <div class="qty">
@@ -98,12 +98,14 @@
                             </b></div>
                             <a  class="button button-primary simpleStore_checkout u-pull-right" id="carrinhoCompra" onclick="salvaPedido();">Confirmar <i class="fa fa-arrow-right"></i></a>
                             <a href="{{ route('login') }}" class="button button-primary carrinho" id="carrinhoCompraLogin" style="display: none;"><span>Login</span></a>
+
+                            <button type="button" class="button button-primary" name="tests" id="tests" onclick="salvaPedido();">teste</button>
                         </div>
                     </div>
                 </div>
             </div>
         </script>
-
+        
         <!-- Error View -->
         <script id="error-template" type="x-template">
             <div class="error">
@@ -122,7 +124,6 @@
                     $( "#carrinhoCompra" ).show();
                     $( "#carrinhoCompraLogin" ).hide();
                 }
-                ajustaEndereco();
             });
 
             function salvaPedido(){
@@ -140,20 +141,8 @@
                     }
                 })
             }
-
-            function ajustaEndereco(){
-                var url = (window.location.href).split("#");
-                if(url.length>0){
-                    if(url[1]=="cart"){
-                        $( "#enderecoLogado" ).show();
-                    }else{
-                        $( "#enderecoLogado" ).hide();
-                    }
-                }else{
-                    $( "#enderecoLogado" ).hide();
-                }
-            }
+            
         </script>
-
+        
 @endsection
 
