@@ -24,7 +24,7 @@
                 <a href="{{ route('ecommerce') }}" class="menu-link">Produtos</a>
             </li>
             <li class="menu-item">
-                <a href="#clube-de-assinatura" class="menu-link">Clube de Assinatura</a>
+                <a href="{{ route('assinatura') }}" class="menu-link">Clube de Assinatura</a>
             </li>
             <li class="menu-item">
                 <div class="row">

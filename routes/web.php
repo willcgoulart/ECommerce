@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Route::get('/ecommerce', 'EcommerceController@index')->name('ecommerce');
 
+Route::get('/assinatura', function () {
+    return view('assinatura');
+})->name('assinatura');
+
 Route::prefix('/produtos')->group(function () {
     Route::get('', 'ProdutoController@index')->name('lista_produto');
     Route::get('criar', 'ProdutoController@create')->name('form_criar_produto');

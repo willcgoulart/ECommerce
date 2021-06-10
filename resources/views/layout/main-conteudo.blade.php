@@ -9,7 +9,7 @@
             <div class="">
                 <div class="conteudo">
                     <div class="seta"> 
-                        <h1 class="titulo-conteudo">A Cervejaria</h1>
+                        <h1 class="titulo-conteudo">Sobre a Cervejaria</h1>
                     </div>
                     
                     <br>
