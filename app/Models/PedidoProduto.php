@@ -15,7 +15,10 @@ class PedidoProduto extends Model
 
     
     
-
+    public function dados()
+    {
+        return $this->belongsTo(Pedido::class);
+    }
 }
 
 ?>

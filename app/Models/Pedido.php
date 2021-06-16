@@ -13,6 +13,11 @@ class Pedido extends Model
 
     protected $fillable = ['id_user', 'pago', 'status', 'data_entrega'];
 
+    public function pedidoProduto()
+    {
+        return $this->hasMany(PedidoProduto::class, 'id_pedido', 'id_pedido');
+    }
+
     public function user()
     {
         return $this->hasOne(User::class, 'id_user', 'id_user');

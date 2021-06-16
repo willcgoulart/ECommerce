@@ -14,7 +14,7 @@
             <div class="simpleStore_cart_container"></div>
             @auth
                 <div class="p-4 mb-4" style="border: 1px solid #EFEFEF; display: none;" id="enderecoLogado">
-                    <h4>Endereço da Entraga</h4>
+                    <h4>Endereço da Entrega</h4>
                     <p style="text-align: left;">Endereço: {{ Auth::user()->endereco }}</p>
                     <p style="text-align: left;">N: {{ Auth::user()->numero." ".Auth::user()->complemento }}</p>
                     <p style="text-align: left;">CEP: {{ Auth::user()->cep }}</p>

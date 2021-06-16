@@ -30,6 +30,8 @@ class EntrarController extends Controller
     public function deslogar()
     {
         Auth::logout();
-        return back();
+        return redirect()->route('login');
+        //return view('entrar.index');
+        //return back();
     }
 }

@@ -18,7 +18,7 @@
                 <a href="{{ route('home') }}" class="menu-link">A Cervejaria</a>
             </li>
             <li class="menu-item">
-                <a href="#sobre" class="menu-link">Sobre</a>
+                <a href="{{ route('home')."#sobreCerverjaria" }}" class="menu-link">Sobre</a>
             </li>
             <li class="menu-item">
                 <a href="{{ route('ecommerce') }}" class="menu-link">Produtos</a>
