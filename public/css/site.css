@@ -8996,7 +8996,7 @@ body {
 }
 /*MAIN BANNER*/
 .tamanho-banner{
-  max-width: 750px;
+  max-width: 740px;
 }
 
 /*MAIN PRODUTO*/
@@ -9007,6 +9007,84 @@ body {
 /*MAIN ASSINATURA*/
 .banner-assinatura{
   max-width: 900px;
+}
+
+.botao-assinar{
+  padding-left: 0;
+  padding-right: 0;
+  color: #fff;
+
+  text-transform: uppercase;
+  background-color: #000;
+  border-radius: 25px;
+  width: 260px;
+}
+
+.planos-assinatura{
+  align-items: center;
+  display:flex;
+  justify-content:space-between;
+}
+
+.tamanho-planos{
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 30%);
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  width: 30%;
+  height: 490px;
+  margin: 0 60 50;
+  padding: 1em 0 2em;
+}
+
+/* Aumenta o tamanho do card central
+.tamanho-mestre{
+  margin-bottom: 120px;
+  height: 560px;
+}
+*/
+
+.valor-plano{
+  font-size: 22px;
+  color: #FFF;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #5e3712;
+}
+
+.mestre{
+  background-color: #d8b577;
+}
+
+.lista-assinatura{
+  color: #000;
+  font-size: 18px;
+  margin: 0 20;
+  background-color: #d8b577;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.lista-assinatura li{
+  padding:6px;
+}
+
+.lista-mestre{
+  color: #fff;
+  background-color: #5e3712;
+}
+
+.titulo-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+.titulo-plano{
+  width: 200px;
+  margin: 5 0 15;
+  color: #414141;
+  font-size: 22px;
 }
 
 .titulo-banner{
@@ -9086,6 +9164,9 @@ body {
   padding-top: 50px;
 }
 .texto-assinatura{
+  font-size: 18px;
+  color: #85684c;
+  font-family: 'Montserrat ', sans-serif;
   text-align: left;
   padding-bottom: 50px;
 }
