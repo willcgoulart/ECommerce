@@ -1631,8 +1631,12 @@ pre code {
   color: #000;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.row-produto{
   justify-content: center;
 }
+
 .row-no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -9020,6 +9024,30 @@ body {
   width: 260px;
 }
 
+.center-box-assinatura{
+  max-width: 1500px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 80px;
+}
+
+.texto1{
+  padding-left: 60px;
+}
+
+.texto2{
+  padding-left: 90px;
+}
+
+.texto3{
+  padding-left: 70px;
+}
+
+.texto4{
+  padding-right: 30px;
+}
+
 .planos-assinatura{
   align-items: center;
   display:flex;
@@ -9160,7 +9188,7 @@ body {
 
 .circulos{
   width: 100%;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   padding-top: 50px;
 }
 .texto-assinatura{

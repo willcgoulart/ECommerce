@@ -34,7 +34,7 @@
             <div class="column">
                 <div class="simpleCart_shelfItem">
                     <img src="" class="item_thumb"/>
-                    <div class="row">
+                    <div class="row row-produto">
                         <h5 class="item_name"></h5>
                         <div class="simpleStore_getDetail_container">
                             <span class="item_price"></span>

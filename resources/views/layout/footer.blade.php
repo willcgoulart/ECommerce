@@ -4,16 +4,16 @@
             <div>
                 <ul class="menu">
                     <li class="menu-item">
-                        <a href="#a-cervejaria" class="rodape">- A Cervejaria</a>
+                        <a href="{{ route('home') }}" class="rodape">- A Cervejaria</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#sobre" class="rodape">- Sobre</a>
+                        <a href="{{ route('home')."#sobreCerverjaria" }}" class="rodape">- Sobre</a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('ecommerce') }}" class="rodape">- Produtos</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#clube-de-assinatura" class="rodape">- Clube de Assinatura</a>
+                        <a href="{{ route('assinatura') }}" class="rodape">- Clube de Assinatura</a>
                     </li>
                     <li class="menu-item">
                         <div class="menu-item telefone">
