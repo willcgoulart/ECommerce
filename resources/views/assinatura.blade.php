@@ -73,7 +73,11 @@
                             <li>- Numero 05</li>
                         </ul>
                         <br>
-                        <a href="" class="btn btn-primary-assinatura botao-assinar">Assinar</a>
+                        <!--Caso queira colocar a opção preta do botão, modificar a classe "bt-primary" acrescentando "-assinatura" e 
+                        adicionar uma segunda classe chamada "botao-assinar" 
+                        Ex: class="btn btn-primary-assinatura botao-assinatura"> 
+                        -->
+                        <a href="" class="btn btn-primary">Assinar</a>
                     </div>
 
                     <div class="tamanho-planos">
