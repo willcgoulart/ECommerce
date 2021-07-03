@@ -77,7 +77,7 @@
                         adicionar uma segunda classe chamada "botao-assinar" 
                         Ex: class="btn btn-primary-assinatura botao-assinatura"> 
                         -->
-                        <a href="" class="btn btn-primary">Assinar</a>
+                        <a href="{{ route('ecommerce')."#product/6" }}" class="btn btn-primary">Assinar</a>
                     </div>
 
                     <div class="tamanho-planos">
@@ -95,7 +95,7 @@
                             <li>- Numero 05</li>
                         </ul>
                         <br>
-                        <a href="" class="btn btn-primary">Assinar</a>
+                        <a href="{{ route('ecommerce')."#product/5" }}" class="btn btn-primary">Assinar</a>
                     </div>
 
                     <div class="tamanho-planos">
@@ -113,9 +113,8 @@
                             <li>- Numero 05</li>
                         </ul>
                         <br>
-                        <a href="" class="btn btn-primary">Assinar</a>
+                        <a href="{{ route('ecommerce')."#product/4" }}" class="btn btn-primary">Assinar</a>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ class Pedido extends Model
     protected $primaryKey = 'id_pedido';
     public $timestamps = false;
 
-    protected $fillable = ['id_user', 'pago', 'status', 'data_entrega'];
+    protected $fillable = ['id_user', 'pago', 'status', 'previsao_entrega', 'data_entrega'];
 
     public function pedidoProduto()
     {

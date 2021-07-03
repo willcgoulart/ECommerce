@@ -35,7 +35,7 @@
                 <div class="simpleCart_shelfItem">
                     <img src="" class="item_thumb"/>
                     <div class="row row-produto">
-                        <h5 class="item_name"></h5>
+                        <h5 class="item_name" name="item_name"></h5>
                         <div class="simpleStore_getDetail_container">
                             <span class="item_price"></span>
                         </div>
@@ -83,7 +83,7 @@
                 <div class="row">
                     <div class="eight columns">
                         <div class="simpleCart_items"></div>
-                        <a href="javascript:;" class="simpleCart_empty u-pull-left">Esvaziar Carrinho <i class="fa fa-trash-o"></i></a>
+                        <a href="javascript:;" class="simpleCart_empty u-pull-left" id="esvaziaCarrinho">Esvaziar Carrinho <i class="fa fa-trash-o"></i></a>
                     </div>
                     <div class="four columns">
                         <div class="cart_info">
@@ -97,7 +97,7 @@
                                 <div class="simpleCart_grandTotal"></div>
                             </b></div>
                             <a  class="button button-primary simpleStore_checkout u-pull-right" id="carrinhoCompra" onclick="salvaPedido();">Confirmar <i class="fa fa-arrow-right"></i></a>
-                            <a href="{{ route('login') }}" class="button button-primary carrinho" id="carrinhoCompraLogin" style="display: none;"><span>Login</span></a>
+                            <a href="{{ route('login').'?carrinho=S' }}" class="button button-primary carrinho" id="carrinhoCompraLogin" style="display: none;"><span>Login</span></a>
                         </div>
                     </div>
                 </div>
@@ -123,22 +123,46 @@
                     $( "#carrinhoCompraLogin" ).hide();
                 }
                 ajustaEndereco();
+          
+                setTimeout(function() {
+                   ajustaPlano();
+                   ajustaDetalheProd();
+                }, 1000);
+     
             });
 
+            function ajustaPlano(){
+                var url = (window.location.href).split("#");
+                if(url.length<2){
+                    var div = $('.simpleCart_shelfItem');
+                    for (let i = 0; i < div.length; i++){
+                        var row_produto = div[i].children;
+                        var item_name = row_produto[1].children
+                        var html = item_name[0].innerHTML;
+
+                        if(html=="CLUBE GLADIADOR ARROJADO" || html=="CLUBE GLADIADOR MESTRE" || html=="CLUBE GLADIADOR NOVATO" ){
+                            div[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+
             function salvaPedido(){
+                var dadosLocalStorage = localStorage.getItem('simpleCart_items');
+                //$("#esvaziaCarrinho").click();
                 $.ajax({
                     url: "{{route('criar_pedido') }}",
                     type: 'post',
-                    data: { _token: '{{csrf_token()}}',dados:  localStorage.getItem('simpleCart_items') },
+                    data: { _token: '{{csrf_token()}}',dados:  dadosLocalStorage },
                     dataType: 'json',
                     success: function (response) {
                         if(response['success'] == true){
                            
                         }else{
-                            
+                           
                         }
                     }
-                })
+                });   
             }
 
             function ajustaEndereco(){
@@ -151,6 +175,21 @@
                     }
                 }else{
                     $( "#enderecoLogado" ).hide();
+                }
+            }
+
+            function ajustaDetalheProd(){
+                var url = (window.location.href).split("#");
+                if(url.length>0){
+                    //console.log( url[1] );
+                    if(url[1]=="product/4" || url[1]=="product/5" || url[1]=="product/6"){
+                
+                        //$(".item_Quantity").addClass("readonly");
+                        $(".item_Quantity").prop("readonly",true);
+                        $(".item_Quantity").css("background-color", "#eaecf4");
+                        $(".item_Quantity").css("opacity", "1");
+                        //console.log( $(".item_Quantity") );
+                    }
                 }
             }
         </script>

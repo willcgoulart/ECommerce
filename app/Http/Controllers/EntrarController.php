@@ -8,9 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class EntrarController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('entrar.index');
+        $carrinho = $request['carrinho'];
+        return view('entrar.index', compact('carrinho'));
     }
 
     public function login(EntrarRequest $request)
@@ -24,6 +25,10 @@ class EntrarController extends Controller
         {
             return redirect()->route('dashboard_adm');
         }
+        if($request['carrinho']=="S"){
+            return redirect()->route('carrinho'); 
+        }
+
         return redirect()->route('dashboard_cliente');
     }   
     

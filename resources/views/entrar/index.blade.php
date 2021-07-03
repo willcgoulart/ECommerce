@@ -54,6 +54,7 @@
                     <button type="submit" class="btn btn-default mt-3" style="color: #ffffff; background-color: #5e3712; width: 40%; height: 100%;">
                         Acessar
                     </button>
+                    <input type="hidden" name="carrinho" value="{{ $carrinho ?? 'N' }}">
                     <p>
                     <a href="{{ route('form_cadastra_user') }}" style="text-decoration: none; color: black">Novo por aqui? Cadastra-se AQUI!!</a></p>
                 </div>

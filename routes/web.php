@@ -18,6 +18,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/ecommerce', 'EcommerceController@index')->name('ecommerce');
+Route::get('/ecommerce#cart', 'EcommerceController@index')->name('carrinho');
 
 Route::get('/assinatura', function () {
     return view('assinatura');
